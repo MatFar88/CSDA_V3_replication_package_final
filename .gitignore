@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+output/*
+!output/README.md
+external_inputs/*/*
+*.lock
+
+# Local reporting bootstrap
+.runtime/
+.venv*/
