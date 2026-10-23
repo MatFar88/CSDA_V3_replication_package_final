@@ -1,0 +1,77 @@
+--- audited_readonly_reader
++++ reproduce/private_banking.py
+@@ -2,7 +2,7 @@
+ Raw matrices remain local. Output tables contain aggregates and variable codes only.
+ """
+ from pathlib import Path
+-import argparse, hashlib, json
++import argparse, hashlib, json, tempfile
+ import numpy as np
+ import pandas as pd
+ import scipy.io as sio
+@@ -12,10 +12,12 @@
+ parser=argparse.ArgumentParser(description=__doc__)
+ parser.add_argument('--inputs',type=Path,required=True,help='Directory containing uploaded banking ZIP/MAT files')
+ parser.add_argument('--sources',type=Path,required=True,help='Directory containing data_ECB_ANOR.mat and ECB_cov_input.mat or the R2 ECB ZIP')
+-parser.add_argument('--output',type=Path,default=Path('CSDA_BANKING_READONLY_OUTPUT'))
++parser.add_argument('--output',type=Path,required=True,help='New aggregate-output directory; must not already exist')
++parser.add_argument('--previous-labels',type=Path,help='Optional historical anonymous label export; not needed for V15 replication')
+ args=parser.parse_args()
+-ROOT=args.inputs.resolve(); BASE=args.output.resolve();BASE.mkdir(parents=True,exist_ok=True)
+-EX=BASE/'extracted';EX.mkdir(exist_ok=True)
++ROOT=args.inputs.resolve(); BASE=args.output.resolve();BASE.mkdir(parents=True,exist_ok=False)
++_scratch=tempfile.TemporaryDirectory(prefix='csda_private_banking_')
++EX=Path(_scratch.name)/'extracted';EX.mkdir()
+ import zipfile
+ for name in ['ANOR_POSTSELECTION_ANALYSIS_V1_output.zip','analysis_descriptive.zip','ANOR_TRKM_final_V1.zip','ECB_TFKM_final_V1(1).zip']:
+  p=ROOT/name
+@@ -38,7 +40,7 @@
+  with zipfile.ZipFile(zips[0]) as zz:
+   hits=[n for n in zz.namelist() if Path(n).name=='ECB_cov_input.mat']
+   if len(hits)!=1:raise ValueError('ECB_cov_input.mat missing or duplicated in ZIP')
+-  private=BASE/'private_inputs';private.mkdir(exist_ok=True)
++  private=Path(_scratch.name)/'private_inputs';private.mkdir(exist_ok=True)
+   LOG_SOURCE=private/'ECB_cov_input.mat';LOG_SOURCE.write_bytes(zz.read(hits[0]))
+ OUT=BASE/'tables';OUT.mkdir(exist_ok=True)
+ RATIO=next((EX/'ANOR_POSTSELECTION_ANALYSIS_V1_output').rglob('SUMMARY.csv')).parent
+@@ -106,10 +108,11 @@
+ check('ratios TRKM U orthonormal',UR.T@UR,np.eye(1),tr.name)
+ part=read(EX/'ANOR_TRKM_final_V1/ANOR_TRKM_PRIMARY_PARTITION_ANONYMOUS.csv')
+ check('ratios row mapping',part.original_365_row.to_numpy(),ids,part.columns.tolist().__str__(),tol=0)
+-old=Path(__file__).resolve().parent.parent/'reference/TFKM_RATIOS_DESCRIPTIVE_ANONYMOUS_RECOVERED.csv'
+-o=read(old)
+-labelcol='cluster' if 'cluster' in o else 'tfkm_cluster'
+-check('ratios new MAT labels vs previous recovered labels',yF,o[labelcol].to_numpy(),old.name,tol=0)
++if args.previous_labels is not None:
++ old=args.previous_labels
++ o=read(old)
++ labelcol='cluster' if 'cluster' in o else 'tfkm_cluster'
++ check('ratios saved MAT labels vs optional historical labels',yF,o[labelcol].to_numpy(),old.name,tol=0)
+ ZF=X@UF;ZR=X@UR
+ T=pd.crosstab(yF[~tR],yR[~tR]);ari=aricount(T.to_numpy());over=float(np.sum((orth(UF).T@orth(UR))**2));angle=float(np.degrees(np.arccos(np.sqrt(over))))
+ check('ratios ARI vs archived',ari,read(RATIO/'SUBSPACE_AND_PARTITION_COMPARISON.csv').iloc[0,0],'SUBSPACE_AND_PARTITION_COMPARISON.csv')
+@@ -192,9 +195,9 @@
+ metric('log_TRKM_null_mass',1-mass[0],'ECB_TRKM_DESCRIPTIVE_SUMMARY.csv')
+ # TFKM size result not included in new CSVs: compare to manuscript rounded values.
+ cf=float(corr(XL[~tlF,0],XL[~tlF]@UlF).item());metric('log_TFKM_retained_size_abs_corr',abs(cf),'raw X + ECB_TFKM_PRIMARY_FINAL.mat')
+-check('log TFKM retained abs size corr vs manuscript',round(abs(cf),3),.475,'V7.14 S9.2',tol=0)
++check('log TFKM retained abs size corr vs manuscript',round(abs(cf),3),.475,'V15 S9.2',tol=0)
+ for k,expected in [(1,21.64),(2,23.29)]:
+- v=XL[(ylF==k)&~tlF,0].mean();metric(f'log_TFKM_cluster_{k}_mean_assets',v,'raw X + ECB_TFKM_PRIMARY_FINAL.mat');check(f'log TFKM group {k} mean assets vs manuscript',round(v,2),expected,'V7.14 S9.2',tol=0)
++ v=XL[(ylF==k)&~tlF,0].mean();metric(f'log_TFKM_cluster_{k}_mean_assets',v,'raw X + ECB_TFKM_PRIMARY_FINAL.mat');check(f'log TFKM group {k} mean assets vs manuscript',round(v,2),expected,'V15 S9.2',tol=0)
+ S=read(LOG/'ECB_TRKM_DESCRIPTIVE_SIZE_BY_CLUSTER.csv')
+ for row in S.itertuples():
+  ix=y==row.cluster;check('log TRKM group '+str(row.cluster)+' assets',[ix.sum(),XL[ix,0].mean(),np.median(XL[ix,0]),Z[ix].mean()],[row.n,row.mean_log_total_assets,row.median_log_total_assets,row.mean_latent_score_1],S.columns.tolist().__str__())
+@@ -207,8 +210,10 @@
+  j=int(r.variable_index)-1;av=a[:,j];bv=b[:,j];got=[(bv.mean()-av.mean())/sd[j],np.mean(av!=0),np.mean(bv!=0),np.median(av[av!=0]),np.median(bv[bv!=0])];exp=[r.standardized_difference_2_minus_1,r.nonzero_rate_cluster_1,r.nonzero_rate_cluster_2,r.median_nonzero_cluster_1,r.median_nonzero_cluster_2];diff.append(np.array(got)-exp)
+ check('log all listed zero/contrast decompositions',np.array(diff),np.zeros_like(diff),'ECB_TRKM_DESCRIPTIVE_CONTRAST_ZERO_DECOMPOSITION.csv')
+ # Save aggregates only.
+-pd.DataFrame(checks).to_csv(OUT/'BANKING_CHECKS_V2.csv',index=False)
+-pd.DataFrame(metrics).to_csv(OUT/'BANKING_METRICS_V2.csv',index=False)
++pd.DataFrame(checks).to_csv(OUT/'BANKING_PRIVATE_CHECKS.csv',index=False)
++pd.DataFrame(metrics).to_csv(OUT/'BANKING_PRIVATE_METRICS.csv',index=False)
+ print(pd.DataFrame(metrics).to_string(index=False))
+ print('CHECKS',len(checks),'PASSED',sum(c['pass_check'] for c in checks))
+ assert all(c['pass_check'] for c in checks), 'Inspect banking check failures before reporting.'
++
++_scratch.cleanup()

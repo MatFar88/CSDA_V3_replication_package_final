@@ -1,0 +1,3 @@
+Representation,N_retained,ARI,Squared_subspace_overlap,Principal_angle_degrees,Input_level
+ratios,291,0.8274906143503159,0.00025622699036159999,89.082822022695296,ARI from counts; angle from saved aggregate overlap
+log_levels,273,-0.0028153762858689571,0.0015116885759650001,87.771753267686776,ARI from counts; angle from saved aggregate overlap

@@ -1,0 +1,9 @@
+Object,Status,Input_level
+Main Tables 1-2,EXPOSITORY; NOT NUMERICAL,theory/method exposition
+Main Table 3,REPRODUCED,2460 original method-unit evaluations
+Main Table 4,REPRODUCED,unit-level mechanism endpoints from original saved evaluations
+Main Tables 5-6 / Supplement S5-S6,REPRODUCED FROM AGGREGATES,no banking microdata
+Supplement Tables S1-S3,REPRODUCED,unit-level WEAK / group / rank diagnostics
+Supplement Table S4,REPRODUCED,FIXED_all_results.csv: 32 data sets / 192 fits; checked against eight workers and three original summaries
+Figure 1,REGENERATED FROM ORIGINAL SCRIPT,deterministic conceptual schematic
+Figures 2-3,NUMERICAL REPRODUCTION,"new rendering, same underlying plotted quantities"

@@ -1,0 +1,13 @@
+% Generated from original inputs; full precision is retained in the matching CSV.
+\begin{tabular}{llllllllllllllll}
+\toprule
+method & n & mean\_ari\_inliers\_full & min\_ari\_inliers\_full & mean\_ari\_inliers\_retained & mean\_trim\_f1 & outlier\_set\_exact\_rate & mean\_false\_trim\_rate & mean\_masking\_rate & mean\_subspace\_projection\_distance & mean\_subspace\_overlap & mean\_principal\_angle\_degrees & mean\_maximum\_principal\_angle\_degrees & mean\_centroid\_nrmse\_observed & mean\_centroid\_nrmse\_latent\_aligned & mean\_runtime\_seconds \\
+\midrule
+PCA\_TKM & 32 & 0.973697 & 0.630585 & 0.988165 & 0.906250 & 0.750000 & 0.010417 & 0.093750 & 1.031787 & 0.533240 & 42.368372 & 48.638893 & 0.031096 & 0.380728 & 0.100944 \\
+RPCA\_TKM & 32 & 0.985119 & 0.920790 & 1.000000 & 0.903125 & 0.656250 & 0.010764 & 0.096875 & 0.212272 & 0.976064 & 7.621718 & 8.123792 & 0.021633 & 0.014178 & 0.129415 \\
+TCLUST & 32 & 0.977898 & 0.883642 & 1.000000 & 0.859375 & 0.750000 & 0.015625 & 0.140625 & -- & -- & -- & -- & 0.017865 & -- & 17.203236 \\
+TFKM\_V2\_HIER4 & 32 & 0.983641 & 0.915287 & 1.000000 & 0.894792 & 0.750000 & 0.011690 & 0.105208 & 1.229572 & 0.449631 & 48.471219 & 50.747027 & 0.014226 & 0.367456 & 29.821284 \\
+TKM & 32 & 0.978223 & 0.883642 & 1.000000 & 0.861458 & 0.750000 & 0.015394 & 0.138542 & -- & -- & -- & -- & 0.017678 & -- & 0.524433 \\
+TRKM\_RVCV & 32 & 0.983418 & 0.911728 & 1.000000 & 0.893750 & 0.750000 & 0.011806 & 0.106250 & 1.227136 & 0.450902 & 48.354913 & 50.448330 & 0.014411 & 0.365945 & 27.280441 \\
+\bottomrule
+\end{tabular}

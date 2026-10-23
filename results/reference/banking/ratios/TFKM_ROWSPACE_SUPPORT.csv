@@ -1,0 +1,3 @@
+method,component,retained_n,p,rank_centered_X,ambient_null_dimension,rowspace_mass,nullspace_mass
+TFKM,1,363,382,361,21,1,1.11022302462516e-16
+TFKM,2,363,382,361,21,0.999999999993364,6.63624710739441e-12

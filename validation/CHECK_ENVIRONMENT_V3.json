@@ -1,0 +1,17 @@
+{
+  "integrity_files_verified": 428,
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scipy": "1.17.0",
+  "matplotlib": "3.10.8",
+  "matlab_on_path": false,
+  "REPORT_available": true,
+  "FULL_MATLAB_runtime_tested_in_build": false,
+  "V1_SELFTEST_and_REPORT_passed_on_author_PC": true,
+  "manuscript_target": "CSDA submission 2026-10-23",
+  "fixed_benchmark": "FINAL32: 32 datasets / 192 fits",
+  "fixed32_original_integrated": true,
+  "missing_original_result_blocks": [],
+  "confidential_banking_microdata_included": false
+}

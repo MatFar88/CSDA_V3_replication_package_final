@@ -1,0 +1,1 @@
+New REPORT runs are written here, in separate timestamped directories. References stay in results/reference. Native FULL workspaces may be placed in a new subdirectory here or in a separate local directory. Do not copy banking private inputs into a public work tree.

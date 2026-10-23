@@ -1,0 +1,5 @@
+Representation,Method,Trimming,Alpha,Rank,Groups,Partition,Group_sizes,Trimmed
+ratios,TFKM,None,,2,3,descriptive,328/8/27,0
+ratios,TRKM,Positive,0.20000000000000001,1,2,selected,5/286,72
+log_levels,TFKM,Positive,0.25,1,2,selected,169/104,90
+log_levels,TRKM,None,,1,2,descriptive,70/293,0

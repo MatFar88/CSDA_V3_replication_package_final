@@ -1,0 +1,2 @@
+method,dataset,action_status,alpha_emitted,alpha_hat,action_ambiguous,per_alpha_winner_path,modal_set,anchor_set,n_anchors,anchor_action_detail,terminal_unique,terminal_set,terminal_r,terminal_g,terminal_status,final_fit_available,final_fit_ambiguous,final_subspace_available,final_subspace_ambiguous,N_edges,N_accepts
+TFKM,ANOR_Q4_2014_363x382_RATIOS,NO_ACTION_CONCORDANT,0,NaN,0,"{(2,3);(3,4);(1,2)}","{(2,3)}","{(2,3)}",1,"(2,3):emit=0:a=NA:Smed=0.222972:DS=0.509766:Jmax=0.270638",1,"{(2,3)}",2,3,NO_ACTION_STRUCTURE_RETAINED,0,0,0,0,0,0

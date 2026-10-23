@@ -1,0 +1,41 @@
+\subsection{Additional known-parameter benchmark}
+
+A separate fixed-parameter comparison evaluates six estimators on 32
+final-validation data sets: four configurations with eight replications each,
+for 192 valid fits. The methods receive $(r_0,g_0,\alpha_0)$; TKM and TCLUST,
+which have no latent-rank parameter, receive $(g_0,\alpha_0)$. REG-HD-TFKM
+uses HIER4 start arbitration and REG-HD-TRKM uses RV--CV. Each fit uses
+100 starts. This experiment isolates fitting performance at known parameters;
+it does not evaluate automatic structural selection on the 41-cell design.
+
+\begin{table}[htbp]
+\centering
+\caption{Fixed-parameter comparison on 32 final-validation data sets
+(four configurations, eight replications each). ARI is evaluated on all
+ genuine observations, including those trimmed by the fit. Runtime is the
+recorded mean seconds per fit.}
+\label{tab:supp-competitors}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Method & Mean ARI & Median ARI & Runtime\\
+\midrule
+TKM & .9782 & 1.0000 & .524\\
+PCA--TKM & .9737 & 1.0000 & .101\\
+ROBPCA--TKM & .9851 & 1.0000 & .129\\
+TCLUST & .9779 & 1.0000 & 17.203\\
+REG-HD-TFKM & .9836 & 1.0000 & 29.821\\
+REG-HD-TRKM & .9834 & 1.0000 & 27.280\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Mean genuine-observation ARI ranges from $.974$ to $.985$, and every method
+has median ARI one in this panel. These are descriptive results for a limited
+fixed-parameter comparison, not evidence of universal dominance. In bridge
+samples, supplying the nominal contamination fraction does not by itself
+remove allocation or trimming ambiguity. The distinction between fitting
+quality, structural selection and exact trimming recovery therefore remains
+important even when partition agreement is high.
+
+

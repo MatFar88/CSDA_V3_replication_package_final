@@ -1,0 +1,2 @@
+method,dataset,n,p,r_hat,g_hat,descriptive_alpha,retained_n,trimmed_n,rank_centered_X,ambient_null_dimension,mean_rowspace_mass,mean_nullspace_mass,RV_CV,W_ratio,R2,corr_latent_score_log_total_assets,R2_latent_score_log_total_assets,primary_action_status
+TRKM,ECB_Q4_2014_363x361,363,361,1,2,0,363,0,344,17,1,2.22044604925031e-16,0.966952054794521,0.000480336064385996,0.000475936823470469,-0.644586407846642,0.415491637180638,NO_ACTION

@@ -1,0 +1,8 @@
+AUDIT_CHANGELOG v1
+------------------
+- Frozen v11/PATCH1 code copied unchanged.
+- Added audit/ functions only.
+- No frozen production function is edited.
+- Audit refits exact deterministic 100-start pools and checks reproduction
+  of the stored frozen winner before interpreting truth-open diagnostics.
+- TFKM challengers are forensic only; TRKM rule is not modified.

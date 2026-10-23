@@ -1,0 +1,4 @@
+Six estimators on all 32 final-validation datasets at true fixed parameters.
+Methods: TFKM_V2_HIER4, TRKM_RVCV, TKM, PCA_TKM, RPCA_TKM, TCLUST. TKM/TCLUST have no r parameter and receive (g0,alpha0).
+Final TFKM V2 selection result is a separate empirical reference: (r,g) recovered on all 32 units; alpha ambiguity only for bridge units.
+The oracle fixed study isolates estimator quality. In bridge units, true alpha does not remove intrinsic allocation/trim ambiguity.

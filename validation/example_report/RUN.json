@@ -1,0 +1,19 @@
+{
+  "manuscript_target": "CSDA submission 2026-10-23",
+  "fixed_benchmark": "FINAL32",
+  "full_replay_executed": false,
+  "mode": "REPORT",
+  "status": "PASS_AVAILABLE_SCOPE",
+  "all_paper_experiments_complete": true,
+  "estimator_refits": 0,
+  "runtime_seconds": 2.9494873270000426,
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "fresh_source": "/mnt/data/CSDA_V3_replication_package_final/results/reference/fresh",
+  "checks_passed": 262,
+  "manuscript_values_verified": true,
+  "pending": [],
+  "banking_source_level": "saved aggregates only"
+}

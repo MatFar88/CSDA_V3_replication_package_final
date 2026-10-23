@@ -1,0 +1,4 @@
+REPORT: 759 checks passed. Manuscript display values verified.
+No estimator refitted. Banking inputs: aggregates only.
+All numerical table blocks reconstructed from supplied results for manuscript V15.2. No FULL rerun certified.
+Open: /tmp/csda_report_v13/REPORT.html

@@ -1,0 +1,16 @@
+paper_object,route,original_inputs,implementation,output,qualification
+Main Table 3,RECOMPUTE,fresh_truth_open_v1/FRESH_TRUTH_UNIT_RESULTS.csv + fresh_posthoc_diagnostic_v1/POSTHOC_UNIT_DIAGNOSTIC.csv,reproduce/report.py: calculate,Main_Table3.csv,Joint includes exact alpha for leverage
+Main Table 4,RECOMPUTE,THEORY_AUDITS_ALL.csv; CLOSURE_GRANK_ALL.csv; A2_TRKM_RADIAL_ARCHIVED_UNIT.csv,reproduce/report.py: calculate,Main_Table4_endpoints.csv,Mechanism endpoints reconstructed from archived unit-level diagnostics
+Main Table 5,AGGREGATE_RECOMPUTE,banking/selections; cluster summaries; cross-counts,reproduce/report.py: banking,Main_Table5.csv,No-action partitions explicitly descriptive
+Main Table 6,AGGREGATE_RECOMPUTE,banking contingency and squared-overlap summaries,reproduce/report.py: banking,Main_Table6.csv,ARI from counts; angle from saved overlap
+Supplement S1,RECOMPUTE,WEAK_TRUESTATE_POOL_ALL.csv + THEORY_AUDITS_ALL.csv,reproduce/report.py: calculate,Supplement_TableS1.csv,"Available versus selected, unconditional across datasets"
+Supplement S2,RECOMPUTE,CLOSURE_GRANK_ALL.csv,reproduce/report.py: calculate,Supplement_TableS2.csv,Printed medians match archived full-precision values
+Supplement S3,RECOMPUTE,CLOSURE_GRANK_ALL.csv,reproduce/report.py: calculate,Supplement_TableS3.csv,"Empirical reference midpoint, not population oracle"
+Supplement S4,RECOMPUTE,results/reference/fixed32/FIXED_all_results.csv,reproduce/fixed32.py: fixed_tables,Supplement_TableS4.csv,4 scenarios x 8 replicates x 6 methods; HIER4/RV-CV final estimator identities; workers/summaries cross-checked
+Supplement S5,AGGREGATE_RECOMPUTE,ratios/TRKM_TRIM_RATE_BY_TFKM_CLUSTER.csv,reproduce/report.py: banking,Supplement_TableS5.csv,Counts checked against retained contingency
+Supplement S6,AGGREGATE_RECOMPUTE,log_levels/ECB_TFKM_TRIM_RATE_BY_TRKM_DESCRIPTIVE_CLUSTER.csv,reproduce/report.py: banking,Supplement_TableS6.csv,Retained TRKM margins1/272
+Figure1,ORIGINAL_SCRIPT,Original deterministic conceptual coordinates,code/figures/make_contamination_figure.py,fig_contamination_geometries.pdf,Not empirical data
+Figure2,RECOMPUTE,CLOSURE_LOCAL_RETURN_ALL.csv BASELINE + LABEL,reproduce/report.py: make_figures,Figure2_partition_vs_exact.pdf,Genuine-label assignment event
+Figure3,RECOMPUTE,WEAK_TRUESTATE_POOL_ALL.csv + THEORY_AUDITS_ALL.csv,reproduce/report.py: make_figures,Figure3_geometry_vs_multistart.pdf,In-sample truth-assisted classification
+Main Tables1-2,EXPOSITORY,Method and theorem exposition,manuscript,not applicable,Not numerical replication targets
+Private banking geometry/profiles,OPTIONAL_PRIVATE,Authorized raw matrices and saved geometries,reproduce/private_banking.py,BANKING_PRIVATE_CHECKS.csv,No new estimator fitting

@@ -1,0 +1,5 @@
+perturb_count,N,Mean_inlier_ARI,Exact_genuine_assignment_return
+0,2460,1,1
+1,2460,0.97583006741618239,0
+2,2460,0.95259948956969931,0
+4,2460,0.9091201604188861,0

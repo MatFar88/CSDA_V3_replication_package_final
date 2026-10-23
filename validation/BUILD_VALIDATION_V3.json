@@ -1,0 +1,13 @@
+{
+  "release": "CSDA V3 final",
+  "manuscript_target": "CSDA submission 2026-10-23",
+  "python_unit_tests": "54/54 passed",
+  "saved_result_report": "262 checks passed",
+  "manuscript_display_values_verified": true,
+  "estimators_refitted_during_report": 0,
+  "full_matlab_rerun_certified": false,
+  "author_pc_predecessor_receipt_retained": true,
+  "notes": [
+    "FINAL32 uses final HIER4/RV-CV estimator arbitration."
+  ]
+}

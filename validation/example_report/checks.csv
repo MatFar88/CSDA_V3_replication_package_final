@@ -1,0 +1,263 @@
+check,status,detail
+schema/count/keys: catalog,PASS,41 rows
+schema/count/keys: manifest,PASS,1230 rows
+schema/count/keys: truth,PASS,2460 rows
+schema/count/keys: posthoc,PASS,2460 rows
+schema/count/keys: theory,PASS,2460 rows
+schema/count/keys: grank,PASS,1230 rows
+schema/count/keys: local,PASS,24600 rows
+schema/count/keys: invariants,PASS,1230 rows
+schema/count/keys: radial,PASS,1230 rows
+schema/count/keys: weak,PASS,300 rows
+truth: method coverage,PASS,
+truth: all1230 TFKM,PASS,
+truth: all1230 TRKM,PASS,
+posthoc: method coverage,PASS,
+posthoc: all1230 TFKM,PASS,
+posthoc: all1230 TRKM,PASS,
+theory: method coverage,PASS,
+theory: all1230 TFKM,PASS,
+theory: all1230 TRKM,PASS,
+grank: all1230,PASS,
+invariants: all1230,PASS,
+radial: all1230,PASS,
+Manifest: 30 reps per scenario,PASS,
+Catalogue: n=120 / alpha rule,PASS,
+Data seed formula,PASS,
+Pair seeds,PASS,
+theory: recorded seeds,PASS,
+grank: recorded seeds,PASS,
+invariants: recorded seeds,PASS,
+local: recorded seeds,PASS,
+weak: recorded seeds,PASS,
+Frozen predictions versus evaluated fields: TFKM,PASS,"method, scenario_id, replicate, alpha_emitted, alpha_hat, terminal_unique, terminal_r, terminal_g"
+Frozen predictions versus evaluated fields: TRKM,PASS,"method, scenario_id, replicate, alpha_emitted, alpha_hat, terminal_unique, terminal_r, terminal_g"
+Truth versus posthoc common fields,PASS,
+Action target is leverage only,PASS,
+Action correctness recomputed from emission and target,PASS,
+Leverage alpha correctness recomputed,PASS,
+All reference ARI rows finite,PASS,
+Structure target recomputed,PASS,
+Joint includes exact alpha for leverage,PASS,
+No synthetic ARI values for unavailable fits,PASS,
+Table3 exact counts TFKM,PASS,"[694, 842, 662]"
+Table3 ARI truth TFKM,PASS,computed=np.float64(0.9498237840897708); expected=0.95; atol=0.0005
+Table3 Best ARI TFKM,PASS,computed=np.float64(0.9842539283189228); expected=0.984; atol=0.0005
+Table3 exact counts TRKM,PASS,"[881, 1207, 866]"
+Table3 ARI truth TRKM,PASS,computed=np.float64(0.9295991361663222); expected=0.93; atol=0.0005
+Table3 Best ARI TRKM,PASS,computed=np.float64(0.9765165449503077); expected=0.977; atol=0.0005
+Local BASELINE reproduces saved theory endpoints,PASS,
+Figure2 four points,PASS,
+Figure2 mean ARI 1.0,PASS,computed=np.float64(0.9758300674161824); expected=0.976; atol=0.0005
+Figure2 exact 1.0,PASS,computed=np.float64(0.0); expected=0; atol=1e-10
+Figure2 mean ARI 2.0,PASS,computed=np.float64(0.9525994895696993); expected=0.953; atol=0.0005
+Figure2 exact 2.0,PASS,computed=np.float64(0.0); expected=0; atol=1e-10
+Figure2 mean ARI 4.0,PASS,computed=np.float64(0.9091201604188861); expected=0.909; atol=0.0005
+Figure2 exact 4.0,PASS,computed=np.float64(0.0); expected=0; atol=1e-10
+First crossing gains from distortion paths,PASS,
+First crossing ratios,PASS,
+First crossing separated1230,PASS,
+Rank empirical-reference threshold,PASS,
+Weyl ratio and flag,PASS,
+Rank midpoint versus boundary eigenvalues,PASS,
+"TableS2 MAIN,bridge,4",PASS,computed=40.7848954412004; manuscript=40.78; display tolerance=0.005
+"TableS2 MAIN,clean,4",PASS,computed=42.4532865235904; manuscript=42.45; display tolerance=0.005
+"TableS2 MAIN,leverage,4",PASS,computed=40.7753171287065; manuscript=40.78; display tolerance=0.005
+"TableS2 STRUCTURE,bridge,3",PASS,computed=51.9976191653714; manuscript=52.0; display tolerance=0.005
+"TableS2 STRUCTURE,bridge,5",PASS,computed=25.1395987817682; manuscript=25.14; display tolerance=0.005
+"TableS2 STRUCTURE,clean,3",PASS,computed=51.4007474118332; manuscript=51.4; display tolerance=0.005
+"TableS2 STRUCTURE,clean,5",PASS,computed=26.135810003497; manuscript=26.14; display tolerance=0.005
+"TableS2 STRUCTURE,leverage,3",PASS,computed=51.434708366078; manuscript=51.43; display tolerance=0.005
+"TableS2 STRUCTURE,leverage,5",PASS,computed=24.6048829462414; manuscript=24.6; display tolerance=0.005
+"TableS2 WEAK_DELTA7,leverage,4",PASS,computed=19.3349202396294; manuscript=19.33; display tolerance=0.005
+TableS3 2/3 count,PASS,
+TableS3 2/3 median,PASS,computed=1.5736285257589748; expected=1.574; atol=0.0005
+TableS3 2/3 Weyl,PASS,computed=1.0; expected=1.0; atol=0.0005
+TableS3 2/3 rank,PASS,computed=1.0; expected=1.0; atol=0.0005
+TableS3 3/4 count,PASS,
+TableS3 3/4 median,PASS,computed=1.218611378312145; expected=1.219; atol=0.0005
+TableS3 3/4 Weyl,PASS,computed=0.5885416666666666; expected=0.589; atol=0.0005
+TableS3 3/4 rank,PASS,computed=1.0; expected=1.0; atol=0.0005
+TableS3 3/5 count,PASS,
+TableS3 3/5 median,PASS,computed=1.31356065389114; expected=1.314; atol=0.0005
+TableS3 3/5 Weyl,PASS,computed=1.0; expected=1.0; atol=0.0005
+TableS3 3/5 rank,PASS,computed=1.0; expected=1.0; atol=0.0005
+TableS3 4/5 count,PASS,
+TableS3 4/5 median,PASS,computed=1.01865701039632; expected=1.019; atol=0.0005
+TableS3 4/5 Weyl,PASS,computed=0.5666666666666667; expected=0.567; atol=0.0005
+TableS3 4/5 rank,PASS,computed=1.0; expected=1.0; atol=0.0005
+Centroid reference type,PASS,
+WEAK 100 valid starts,PASS,
+"TableS1 ['TFKM', 1, 1] Median_Gspec",PASS,computed=np.float64(0.8510717537200225); expected=0.851; atol=0.0005
+"TableS1 ['TFKM', 1, 1] Median_GPeff",PASS,computed=np.float64(0.052939058975997905); expected=0.053; atol=0.0005
+"TableS1 ['TFKM', 1, 1] Available",PASS,computed=np.float64(1.0); expected=1.0; atol=0.0005
+"TableS1 ['TFKM', 1, 1] Selected",PASS,computed=np.float64(1.0); expected=1.0; atol=0.0005
+"TableS1 ['TFKM', 1, 2] Median_Gspec",PASS,computed=np.float64(0.8505838824772745); expected=0.851; atol=0.0005
+"TableS1 ['TFKM', 1, 2] Median_GPeff",PASS,computed=np.float64(0.055876203878462996); expected=0.056; atol=0.0005
+"TableS1 ['TFKM', 1, 2] Available",PASS,computed=np.float64(0.4); expected=0.4; atol=0.0005
+"TableS1 ['TFKM', 1, 2] Selected",PASS,computed=np.float64(0.3333333333333333); expected=0.333; atol=0.0005
+"TableS1 ['TFKM', 2, 0.25] Median_Gspec",PASS,computed=np.float64(0.8491257860198925); expected=0.849; atol=0.0005
+"TableS1 ['TFKM', 2, 0.25] Median_GPeff",PASS,computed=np.float64(0.18435102244380402); expected=0.184; atol=0.0005
+"TableS1 ['TFKM', 2, 0.25] Available",PASS,computed=np.float64(1.0); expected=1.0; atol=0.0005
+"TableS1 ['TFKM', 2, 0.25] Selected",PASS,computed=np.float64(0.7333333333333333); expected=0.733; atol=0.0005
+"TableS1 ['TFKM', 2, 1] Median_Gspec",PASS,computed=np.float64(0.8502791662179121); expected=0.85; atol=0.0005
+"TableS1 ['TFKM', 2, 1] Median_GPeff",PASS,computed=np.float64(0.416671917605499); expected=0.417; atol=0.0005
+"TableS1 ['TFKM', 2, 1] Available",PASS,computed=np.float64(0.9333333333333333); expected=0.933; atol=0.0005
+"TableS1 ['TFKM', 2, 1] Selected",PASS,computed=np.float64(0.8); expected=0.8; atol=0.0005
+"TableS1 ['TFKM', 2, 2] Median_Gspec",PASS,computed=np.float64(0.8505449264532754); expected=0.851; atol=0.0005
+"TableS1 ['TFKM', 2, 2] Median_GPeff",PASS,computed=np.float64(0.28400835929309154); expected=0.284; atol=0.0005
+"TableS1 ['TFKM', 2, 2] Available",PASS,computed=np.float64(0.0); expected=0.0; atol=0.0005
+"TableS1 ['TFKM', 2, 2] Selected",PASS,computed=np.float64(0.0); expected=0.0; atol=0.0005
+"TableS1 ['TRKM', 1, 1] Median_Gspec",PASS,computed=np.float64(1.5563795304474); expected=1.556; atol=0.0005
+"TableS1 ['TRKM', 1, 1] Median_GPeff",PASS,computed=np.float64(0.06693552565725175); expected=0.067; atol=0.0005
+"TableS1 ['TRKM', 1, 1] Available",PASS,computed=np.float64(1.0); expected=1.0; atol=0.0005
+"TableS1 ['TRKM', 1, 1] Selected",PASS,computed=np.float64(0.8666666666666667); expected=0.867; atol=0.0005
+"TableS1 ['TRKM', 1, 2] Median_Gspec",PASS,computed=np.float64(1.443980335413975); expected=1.444; atol=0.0005
+"TableS1 ['TRKM', 1, 2] Median_GPeff",PASS,computed=np.float64(0.07318267551815175); expected=0.073; atol=0.0005
+"TableS1 ['TRKM', 1, 2] Available",PASS,computed=np.float64(0.36666666666666664); expected=0.367; atol=0.0005
+"TableS1 ['TRKM', 1, 2] Selected",PASS,computed=np.float64(0.13333333333333333); expected=0.133; atol=0.0005
+"TableS1 ['TRKM', 2, 0.25] Median_Gspec",PASS,computed=np.float64(1.62273685469115); expected=1.623; atol=0.0005
+"TableS1 ['TRKM', 2, 0.25] Median_GPeff",PASS,computed=np.float64(0.185770516318105); expected=0.186; atol=0.0005
+"TableS1 ['TRKM', 2, 0.25] Available",PASS,computed=np.float64(1.0); expected=1.0; atol=0.0005
+"TableS1 ['TRKM', 2, 0.25] Selected",PASS,computed=np.float64(0.9); expected=0.9; atol=0.0005
+"TableS1 ['TRKM', 2, 1] Median_Gspec",PASS,computed=np.float64(1.3651279231307352); expected=1.365; atol=0.0005
+"TableS1 ['TRKM', 2, 1] Median_GPeff",PASS,computed=np.float64(0.418103640981553); expected=0.418; atol=0.0005
+"TableS1 ['TRKM', 2, 1] Available",PASS,computed=np.float64(0.9666666666666667); expected=0.967; atol=0.0005
+"TableS1 ['TRKM', 2, 1] Selected",PASS,computed=np.float64(0.43333333333333335); expected=0.433; atol=0.0005
+"TableS1 ['TRKM', 2, 2] Median_Gspec",PASS,computed=np.float64(1.20439623200232); expected=1.204; atol=0.0005
+"TableS1 ['TRKM', 2, 2] Median_GPeff",PASS,computed=np.float64(0.28484625609617253); expected=0.285; atol=0.0005
+"TableS1 ['TRKM', 2, 2] Available",PASS,computed=np.float64(0.0); expected=0.0; atol=0.0005
+"TableS1 ['TRKM', 2, 2] Selected",PASS,computed=np.float64(0.0); expected=0.0; atol=0.0005
+WEAK accessibility AUC TFKM,PASS,computed=0.6012; expected=0.6012; atol=5e-05
+WEAK accessibility AUC TRKM,PASS,computed=0.9004; expected=0.9004; atol=5e-05
+Radial counts,PASS,
+Independent saved radial evaluations agree,PASS,
+Genuine labels at reference state TFKM,PASS,computed=1230; expected=1230; atol=1e-10
+Genuine labels and mask TFKM,PASS,computed=1180; expected=1180; atol=1e-10
+In-sample projected classification TFKM,PASS,computed=1228; expected=1228; atol=1e-10
+Genuine labels at reference state TRKM,PASS,computed=1230; expected=1230; atol=1e-10
+Genuine labels and mask TRKM,PASS,computed=1181; expected=1181; atol=1e-10
+In-sample projected classification TRKM,PASS,computed=1230; expected=1230; atol=1e-10
+ratios: complete aggregate contingency cells,PASS,
+"ratios: overlap in [0,1]",PASS,
+ratios: retained N,PASS,computed=np.int64(291); expected=291; atol=1e-10
+ratios: ARI from counts vs saved aggregate,PASS,computed=0.8274906143503159; expected=0.827490614350316; atol=1e-10
+ratios: ARI vs paper,PASS,computed=0.8274906143503159; expected=0.8274906143503161; atol=1e-10
+ratios: angle from saved overlap,PASS,computed=89.0828220226953; expected=89.0828220226953; atol=1e-08
+ratios: angle paper rounding,PASS,computed=89.0828220226953; expected=89.1; atol=0.05
+log_levels: complete aggregate contingency cells,PASS,
+"log_levels: overlap in [0,1]",PASS,
+log_levels: retained N,PASS,computed=np.int64(273); expected=273; atol=1e-10
+log_levels: ARI from counts vs saved aggregate,PASS,computed=-0.002815376285868957; expected=-0.0028153762858689; atol=1e-10
+log_levels: ARI vs paper,PASS,computed=-0.002815376285868957; expected=-0.0028153763; atol=1e-10
+log_levels: angle from saved overlap,PASS,computed=87.77175326768678; expected=87.7717532676867; atol=1e-08
+log_levels: angle paper rounding,PASS,computed=87.77175326768678; expected=87.8; atol=0.05
+TableS5 counts,PASS,
+TableS5 matches contingency,PASS,
+TableS6 counts,PASS,
+TableS6 matches contingency,PASS,
+ANOR_TFKM: counts and output contract,PASS,
+ANOR_TRKM: counts and output contract,PASS,
+ANOR_TRKM: floor(n alpha),PASS,computed=72; expected=72; atol=1e-10
+ECB_TFKM: counts and output contract,PASS,
+ECB_TFKM: floor(n alpha),PASS,computed=90; expected=90; atol=1e-10
+ECB_TRKM: counts and output contract,PASS,
+FINAL32: four declared scenarios,PASS,
+FINAL32: six original method identities,PASS,
+FINAL32: 32 unique data sets,PASS,
+FINAL32: eight replicates in every scenario/method,PASS,
+FINAL32: six methods for every data set,PASS,
+FINAL32: all fits valid,PASS,
+FINAL32: 100 starts recorded,PASS,
+FINAL32: session letters match replicates,PASS,
+FINAL32: bounded finite ari_inliers_full,PASS,
+FINAL32: bounded finite ari_inliers_retained,PASS,
+FINAL32: finite nonnegative runtime,PASS,
+FINAL32: HIER4 arbitration,PASS,
+FINAL32: RV_CV arbitration,PASS,
+FINAL32: common generating r0,PASS,
+FINAL32: common generating g0,PASS,
+FINAL32: common generating alpha0,PASS,
+FINAL32: common generating contamination,PASS,
+FINAL32: common generating truth_regime,PASS,
+FINAL32: recorded nominal contamination levels,PASS,
+FINAL32 worker A matches merged records,PASS,
+FINAL32 worker B matches merged records,PASS,
+FINAL32 worker C matches merged records,PASS,
+FINAL32 worker D matches merged records,PASS,
+FINAL32 worker E matches merged records,PASS,
+FINAL32 worker F matches merged records,PASS,
+FINAL32 worker G matches merged records,PASS,
+FINAL32 worker H matches merged records,PASS,
+"FINAL32: workers are exact coverage, not extra observations",PASS,
+FINAL32 summary: original summary columns,PASS,
+FINAL32 summary: recomputed method,PASS,
+FINAL32 summary: recomputed n,PASS,
+FINAL32 summary: recomputed mean_ari_inliers_full,PASS,
+FINAL32 summary: recomputed min_ari_inliers_full,PASS,
+FINAL32 summary: recomputed mean_ari_inliers_retained,PASS,
+FINAL32 summary: recomputed mean_trim_f1,PASS,
+FINAL32 summary: recomputed outlier_set_exact_rate,PASS,
+FINAL32 summary: recomputed mean_false_trim_rate,PASS,
+FINAL32 summary: recomputed mean_masking_rate,PASS,
+FINAL32 summary: recomputed mean_subspace_projection_distance,PASS,
+FINAL32 summary: recomputed mean_subspace_overlap,PASS,
+FINAL32 summary: recomputed mean_principal_angle_degrees,PASS,
+FINAL32 summary: recomputed mean_maximum_principal_angle_degrees,PASS,
+FINAL32 summary: recomputed mean_centroid_nrmse_observed,PASS,
+FINAL32 summary: recomputed mean_centroid_nrmse_latent_aligned,PASS,
+FINAL32 summary: recomputed mean_runtime_seconds,PASS,
+FINAL32 by_scenario: original summary columns,PASS,
+FINAL32 by_scenario: recomputed method,PASS,
+FINAL32 by_scenario: recomputed scenario_id,PASS,
+FINAL32 by_scenario: recomputed n,PASS,
+FINAL32 by_scenario: recomputed mean_ari_inliers_full,PASS,
+FINAL32 by_scenario: recomputed min_ari_inliers_full,PASS,
+FINAL32 by_scenario: recomputed mean_ari_inliers_retained,PASS,
+FINAL32 by_scenario: recomputed mean_trim_f1,PASS,
+FINAL32 by_scenario: recomputed outlier_set_exact_rate,PASS,
+FINAL32 by_scenario: recomputed mean_false_trim_rate,PASS,
+FINAL32 by_scenario: recomputed mean_masking_rate,PASS,
+FINAL32 by_scenario: recomputed mean_subspace_projection_distance,PASS,
+FINAL32 by_scenario: recomputed mean_subspace_overlap,PASS,
+FINAL32 by_scenario: recomputed mean_principal_angle_degrees,PASS,
+FINAL32 by_scenario: recomputed mean_maximum_principal_angle_degrees,PASS,
+FINAL32 by_scenario: recomputed mean_centroid_nrmse_observed,PASS,
+FINAL32 by_scenario: recomputed mean_centroid_nrmse_latent_aligned,PASS,
+FINAL32 by_scenario: recomputed mean_runtime_seconds,PASS,
+FINAL32 by_regime: original summary columns,PASS,
+FINAL32 by_regime: recomputed method,PASS,
+FINAL32 by_regime: recomputed truth_regime,PASS,
+FINAL32 by_regime: recomputed n,PASS,
+FINAL32 by_regime: recomputed mean_ari_inliers_full,PASS,
+FINAL32 by_regime: recomputed min_ari_inliers_full,PASS,
+FINAL32 by_regime: recomputed mean_ari_inliers_retained,PASS,
+FINAL32 by_regime: recomputed mean_trim_f1,PASS,
+FINAL32 by_regime: recomputed outlier_set_exact_rate,PASS,
+FINAL32 by_regime: recomputed mean_false_trim_rate,PASS,
+FINAL32 by_regime: recomputed mean_masking_rate,PASS,
+FINAL32 by_regime: recomputed mean_subspace_projection_distance,PASS,
+FINAL32 by_regime: recomputed mean_subspace_overlap,PASS,
+FINAL32 by_regime: recomputed mean_principal_angle_degrees,PASS,
+FINAL32 by_regime: recomputed mean_maximum_principal_angle_degrees,PASS,
+FINAL32 by_regime: recomputed mean_centroid_nrmse_observed,PASS,
+FINAL32 by_regime: recomputed mean_centroid_nrmse_latent_aligned,PASS,
+FINAL32 by_regime: recomputed mean_runtime_seconds,PASS,
+TableS4 FINAL32 TKM mean,PASS,computed=0.978223289533121; manuscript=0.9782; display tolerance=5e-05
+TableS4 FINAL32 TKM median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 TKM runtime,PASS,computed=0.524432909375; manuscript=0.524; display tolerance=0.0005
+TableS4 FINAL32 PCA-TKM mean,PASS,computed=0.973697082656628; manuscript=0.9737; display tolerance=5e-05
+TableS4 FINAL32 PCA-TKM median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 PCA-TKM runtime,PASS,computed=0.10094355625; manuscript=0.101; display tolerance=0.0005
+TableS4 FINAL32 ROBPCA-TKM mean,PASS,computed=0.985119300231489; manuscript=0.9851; display tolerance=5e-05
+TableS4 FINAL32 ROBPCA-TKM median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 ROBPCA-TKM runtime,PASS,computed=0.129415253125; manuscript=0.129; display tolerance=0.0005
+TableS4 FINAL32 TCLUST mean,PASS,computed=0.977898000759171; manuscript=0.9779; display tolerance=5e-05
+TableS4 FINAL32 TCLUST median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 TCLUST runtime,PASS,computed=17.203235821875; manuscript=17.203; display tolerance=0.0005
+TableS4 FINAL32 REG-HD-TFKM mean,PASS,computed=0.983640987189653; manuscript=0.9836; display tolerance=5e-05
+TableS4 FINAL32 REG-HD-TFKM median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 REG-HD-TFKM runtime,PASS,computed=29.821284121875; manuscript=29.821; display tolerance=0.0005
+TableS4 FINAL32 REG-HD-TRKM mean,PASS,computed=0.983417998206548; manuscript=0.9834; display tolerance=5e-05
+TableS4 FINAL32 REG-HD-TRKM median,PASS,computed=1; manuscript=1.0; display tolerance=5e-05
+TableS4 FINAL32 REG-HD-TRKM runtime,PASS,computed=27.28044130625; manuscript=27.28; display tolerance=0.0005

@@ -1,0 +1,63 @@
+check,pass_check,max_absolute_error,tolerance,relative,source
+ratios raw shape,True,0.0,0.0,False,data_ECB_ANOR.mat
+ratios duplicate 93=99,True,0.0,0.0,False,data_ECB_ANOR.mat
+ratios duplicate 108=126,True,0.0,0.0,False,data_ECB_ANOR.mat
+ratios unique clean rows,True,0.0,0.0,False,data_ECB_ANOR.mat
+ratios TFKM no descriptive trimming,True,0.0,0.0,False,ANOR_TFKM_DESCRIPTIVE_REFIT.mat
+ratios TFKM Labels top vs fit,True,0.0,0.0,False,ANOR_TFKM_DESCRIPTIVE_REFIT.mat
+ratios TFKM converged,True,0.0,0.0,False,ANOR_TFKM_DESCRIPTIVE_REFIT.mat
+ratios TFKM U orthonormal,True,4.440892098500626e-16,1e-10,False,ANOR_TFKM_DESCRIPTIVE_REFIT.mat
+ratios TRKM U orthonormal,True,2.220446049250313e-16,1e-10,False,ANOR_TRKM_PRIMARY_FINAL.mat
+ratios row mapping,True,0.0,0.0,False,"['bank_index', 'original_365_row', 'cluster', 'trimmed']"
+ratios ARI vs archived,True,1.1102230246251565e-16,1e-10,False,SUBSPACE_AND_PARTITION_COMPARISON.csv
+ratios overlap vs archived,True,1.8973538018496328e-18,1e-10,False,SUBSPACE_AND_PARTITION_COMPARISON.csv
+ratios angle vs archived,True,1.4210854715202004e-14,1e-10,False,SUBSPACE_AND_PARTITION_COMPARISON.csv
+ratios retained crosstab,True,0.0,0.0,False,TFKM_TRKM_CROSSTAB_ON_TRKM_RETAINED.csv
+ratios TFKM size correlations,True,2.345346139520643e-15,1e-10,False,TFKM_SCORE_ASSET_ASSOCIATION.csv
+ratios TFKM row rank,True,0.0,0.0,False,TFKM_ROWSPACE_SUPPORT.csv
+ratios TFKM row mass,True,9.992007221626409e-16,2e-10,False,TFKM_ROWSPACE_SUPPORT.csv
+ratios TFKM all listed loadings,True,4.85722573273506e-16,1e-10,False,TFKM_TOP_LOADINGS.csv
+ratios TFKM all listed variable-score correlations,True,5.950795411990839e-14,1e-10,False,TFKM_TOP_SCORE_CORRELATIONS.csv
+ratios TFKM cluster 1 summary,True,1.7763568394002505e-14,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TFKM cluster 1 centroid,True,1.734723475976807e-18,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TFKM cluster 2 summary,True,3.552713678800501e-14,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TFKM cluster 2 centroid,True,9.063930161978817e-17,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TFKM cluster 3 summary,True,2.4868995751603507e-14,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TFKM cluster 3 centroid,True,9.855397747893235e-17,1e-10,False,TFKM_CLUSTER_SUMMARY
+ratios TRKM size correlations,True,3.885780586188048e-16,1e-10,False,TRKM_SCORE_ASSET_ASSOCIATION.csv
+ratios TRKM row rank,True,0.0,0.0,False,TRKM_ROWSPACE_SUPPORT.csv
+ratios TRKM row mass,True,2.220446049250313e-16,2e-10,False,TRKM_ROWSPACE_SUPPORT.csv
+ratios TRKM all listed loadings,True,4.996003610813204e-16,1e-10,False,TRKM_TOP_LOADINGS.csv
+ratios TRKM all listed variable-score correlations,True,4.107825191113079e-15,1e-10,False,TRKM_TOP_SCORE_CORRELATIONS.csv
+ratios TRKM cluster 1 summary,True,4.618527782440651e-14,1e-10,False,TRKM_CLUSTER_SUMMARY
+ratios TRKM cluster 1 centroid,True,3.885780586188048e-16,1e-10,False,TRKM_CLUSTER_SUMMARY
+ratios TRKM cluster 2 summary,True,4.618527782440651e-14,1e-10,False,TRKM_CLUSTER_SUMMARY
+ratios TRKM cluster 2 centroid,True,4.336808689942018e-17,1e-10,False,TRKM_CLUSTER_SUMMARY
+ratios assets retained,True,2.842170943040401e-14,1e-10,False,TRKM_RETAINED_TRIMMED_ASSETS.csv
+ratios assets trimmed,True,3.197442310920451e-14,1e-10,False,TRKM_RETAINED_TRIMMED_ASSETS.csv
+ratios all numeric rows TFKM_TOP_MULTIGROUP_CONTRASTS.csv,True,4.6629367034256575e-15,1e-10,False,TFKM_TOP_MULTIGROUP_CONTRASTS.csv
+ratios all numeric rows TRKM_TOP_CLUSTER_CONTRASTS.csv,True,5.329070518200751e-15,1e-10,False,TRKM_TOP_CLUSTER_CONTRASTS.csv
+ratios all numeric rows TRKM_TOP_TRIMMED_VS_RETAINED_CONTRASTS.csv,True,5.551115123125783e-16,1e-10,False,TRKM_TOP_TRIMMED_VS_RETAINED_CONTRASTS.csv
+log raw covariance relative error,True,3.8362360016948094e-15,1e-10,False,ECB_cov_input.mat
+log duplicate 93=99,True,0.0,0.0,False,ECB_cov_input.mat
+log clean unique rows,True,0.0,0.0,False,ECB_cov_input.mat
+log saved center vs raw clean mean,True,1.9539925233402755e-14,1e-10,False,ECB_TRKM_DESCRIPTIVE_ANALYSIS.mat + ECB_cov_input.mat
+log saved residual vector,True,3.469446951953614e-15,1e-09,False,ECB_TRKM_DESCRIPTIVE_ANALYSIS.mat
+log descriptive counts from nearest saved centers,True,0.0,0.0,False,ECB_TRKM_DESCRIPTIVE_CLUSTER_SIZES.csv
+log center 1 reconstructed,True,8.881784197001252e-16,1e-10,False,ECB_TRKM_DESCRIPTIVE_ANALYSIS.mat
+log center 2 reconstructed,True,2.220446049250313e-16,1e-10,False,ECB_TRKM_DESCRIPTIVE_ANALYSIS.mat
+log row mapping,True,0.0,0.0,False,"['bank_index', 'original_364_row', 'cluster', 'trimmed']"
+log crossmethod full row,True,4.263256414560601e-14,1e-10,False,ECB_TFKM_TRKM_SECONDARY_COMPARISON.csv
+log trimming counts,True,0.0,0.0,False,ECB_TFKM_TRIM_RATE_BY_TRKM_DESCRIPTIVE_CLUSTER.csv
+log TRKM size corr,True,1.1102230246251565e-16,1e-10,False,ECB_TRKM_DESCRIPTIVE_SUMMARY.csv
+log TRKM row rank,True,0.0,0.0,False,ECB_TRKM_DESCRIPTIVE_SUMMARY.csv
+log TRKM row mass,True,0.0,1e-10,False,ECB_TRKM_DESCRIPTIVE_SUMMARY.csv
+log TFKM retained abs size corr vs manuscript,True,0.0,0.0,False,V15 S9.2
+log TFKM group 1 mean assets vs manuscript,True,0.0,0.0,False,V15 S9.2
+log TFKM group 2 mean assets vs manuscript,True,0.0,0.0,False,V15 S9.2
+log TRKM group 1 assets,True,4.440892098500626e-15,1e-10,False,"['cluster', 'n', 'mean_log_total_assets', 'median_log_total_assets', 'mean_latent_score_1']"
+log TRKM group 2 assets,True,2.842170943040401e-14,1e-10,False,"['cluster', 'n', 'mean_log_total_assets', 'median_log_total_assets', 'mean_latent_score_1']"
+log all listed score correlations,True,2.7755575615628914e-15,1e-10,False,ECB_TRKM_DESCRIPTIVE_SCORE_CORRELATIONS.csv
+log all listed raw loadings,True,4.718447854656915e-16,1e-10,False,ECB_TRKM_DESCRIPTIVE_RAW_LOADINGS.csv
+log listed data-supported loadings,True,4.996003610813204e-16,1e-10,False,ECB_TRKM_DESCRIPTIVE_DATA_SUPPORTED_LOADINGS.csv
+log all listed zero/contrast decompositions,True,4.973799150320701e-14,1e-10,False,ECB_TRKM_DESCRIPTIVE_CONTRAST_ZERO_DECOMPOSITION.csv

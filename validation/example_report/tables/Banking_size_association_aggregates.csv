@@ -1,0 +1,5 @@
+Representation,Method,Component,Score_size_correlation,Input_level
+ratios,TFKM,1,-0.22926203589362801,saved aggregate
+ratios,TFKM,2,-0.11936065639582,saved aggregate
+ratios,TRKM,1,0.225006077507203,saved aggregate
+log_levels,TRKM,1,-0.64458640784664201,saved aggregate
