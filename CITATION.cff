@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying REG-HD-TFKM / REG-HD-TRKM manuscript; no journal DOI has been assigned at submission."
+type: software
+title: "CSDA V3 replication package for Regularized high-dimensional Trimmed Factorial and Reduced K-means"
+version: "3.0.0-final"
+date-released: "2026-10-23"
+authors:
+  - family-names: "Di Nuzzo"
+    given-names: "Cinzia"
+  - family-names: "Farnè"
+    given-names: "Matteo"
