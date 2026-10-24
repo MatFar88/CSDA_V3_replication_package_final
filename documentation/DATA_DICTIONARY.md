@@ -45,4 +45,8 @@ ANOR files denote ratios to assets (363x382); ECB files denote log-level FINREP 
 
 ## Rounding and failures
 
-Full precision is kept in output CSVs. Integer counts and structural keys are checked exactly; float consistency comparisons use stated absolute tolerances. Published three/four-decimal displays are compared at their rounding precision. Four S2 medians differ at the last printed digit and are explicitly marked `DISPLAY_ROUNDING_DIFFERENCE`, not silently forced to PASS. Missing input, duplicate key, mismatched seeds, invalid contingency or a meaningful numerical discrepancy raises an error and writes failure information, not a substituted result.
+Full precision is kept in output CSVs. Integer counts and structural keys are checked exactly; float consistency comparisons use stated absolute tolerances. Published displays are compared at their stated rounding precision.
+
+The four Supplement Table S2 median differences at the last printed digit, previously described as `DISPLAY_ROUNDING_DIFFERENCE`, belong to the V1 generation. They were corrected in the current manuscript, as documented in the [author's V1 receipt](../validation/AUTHOR_V1_RECEIPT.md). For the V3 release, all 10 `TableS2` checks in the [saved-result report](../validation/example_report/checks.csv) are `PASS`; the [V3 build validation](../validation/BUILD_VALIDATION_V3.json) records 262 passed checks overall and confirms verification of manuscript display values.
+
+Missing input, duplicate key, mismatched seeds, invalid contingency or a meaningful numerical discrepancy raises an error and writes failure information, not a substituted result.
